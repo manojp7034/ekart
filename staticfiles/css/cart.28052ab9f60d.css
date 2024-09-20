@@ -1,0 +1,46 @@
+body{
+    background-color: bisque;
+}
+
+
+
+
+.product-image, img{
+
+    height: 150px;
+    width: 200px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 50%;
+
+}
+.product-image{
+    width: 230px;
+    height: 175px;
+    background-color: rgb(23, 75, 79);
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 20px;
+    
+}
+.card-text{
+    margin-top: 20px;
+    margin-left: 30px;
+    color: rgb(17, 5, 63);
+    text-decoration: burlywood;
+}
+.card-remove{
+
+    margin-left: 30px;
+    
+}
+.card-total{
+    margin-left: 50px;
+    color: rgb(19, 6, 49);
+}
+.buying{
+    margin-left: 400px;
+    margin-top: 10px;
+}button{
+    height: 30px; width: 100px; color: white; border-radius: 10px; background-color: rgb(5, 66, 17);
+}
+
