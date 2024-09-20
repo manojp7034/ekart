@@ -1,0 +1,167 @@
+
+
+<!DOCTYPE html>
+
+    <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Select page Seller Ekart</title>
+        
+
+        <style>
+                        
+            /* Reset default styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            /* Global styles */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+            }
+            
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+                max-height: 1200px;
+            }
+            
+            /* Navbar */
+            .navbar {
+                background-color: #063c4b;
+                color: #fff;
+                padding: 10px 0;
+            }
+            
+            .navbar .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            
+            .navbar h1.logo {
+                font-size: 1.8rem;
+                margin: 0;
+            }
+            
+            .navbar nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+            
+            .navbar nav ul li {
+                margin-right: 20px;
+            }
+            
+            .navbar nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.2rem;
+                transition: color 0.3s ease;
+            }
+            
+            .navbar nav ul li a:hover {
+                color: #62ea5d;
+            }
+            
+            /* Hero section */
+            .hero {
+                background-image: url('https://asset.gecdesigns.com/img/background-templates/blue-abstract-business-background-template-1612006256659-cover.webp'); /* Replace with your background image */
+                background-size: cover;
+                background-position: center;
+                color: #fff;
+                padding: 80px 0;
+            }
+            
+            .hero h2 {
+                font-size: 3rem;
+                margin-bottom: 20px;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+            }
+            
+            .buttons .btn {
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: #7b1277;
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.1rem;
+                margin-right: 15px;
+                transition: background-color 0.3s ease;
+                border-radius: 50px;
+                border-style: groove;
+            }
+            
+            .buttons .btn:hover {
+                background-color: #a13d0b;
+                
+                
+                text-align: center;
+               
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+                
+                
+            }
+            
+            /* Footer */
+            footer {
+                background-color: #041f36;
+                color: #fff;
+                text-align: center;
+                padding: 10px 0;
+            }
+            
+            footer p {
+                margin: 0;
+            }
+        </style>
+        
+        </head>
+        <body>
+        
+        <div class="navbar">
+          <div class="container">
+            <h1 class="logo">Ekart</h1>
+            <nav>
+              <ul>
+                <li><a href="{% url 'customer:index' %}">Home</a></li>
+                <li><a href="{% url 'seller:addproduct' %}">Add Product</a></li>
+                <li><a href="{% url 'seller:viewproduct' %}">View Product</a></li>
+                <li><a href="{% url 'seller:logout' %}">Logout</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+        
+        <div class="hero">
+          <div class="container">
+            <h2>Welcome to the Ekart</h2>
+            <p>Please select the buttons and sell your products or view the details of the products</p>
+            <div class="buttons">
+              <a href="{% url 'seller:addproduct' %}" class="btn">Add Product</a>
+              <a href="{% url 'seller:viewproduct' %}" class="btn">View Product</a>
+            </div>
+          </div>
+        </div>
+        
+        <footer>
+          <div class="container">
+            <p>&copy; 2024 Ekart. All rights reserved.</p>
+          </div>
+        </footer>
+        
+        </body>
+        </html>

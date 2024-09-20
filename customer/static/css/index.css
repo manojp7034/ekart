@@ -1,0 +1,33 @@
+
+
+h5{
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: red;
+    
+}
+
+
+.frontimg{
+    
+    height: 500px;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(196, 223, 231);
+}
+.img1{
+    height: 400px;
+    width: 800px;
+}
+.foot1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    
+}

@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+      
+      <style>
+        .z-depth-1{
+          background-color: #eeebed;
+        }
+        body{
+          background: url("{% static 'img/ekartimage2.jpg' %}") no-repeat center ;
+            background-size: cover;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            
+            margin-top: 150px;
+            width: 100%; 
+          
+          }
+         
+      </style>
+
+    </head>
+    
+    <body>
+    
+
+    
+         
+            <div class="z-depth-1" style="display: inline-block; padding: 32px 48px 0px 48px; margin-top: 150px; margin-left: 500px; border: 1px solid #2f9dbe;">
+    
+              <form class="col s12" method="post" onsubmit="return login_validate()">
+                {% csrf_token %}
+    
+                <div class='row'>
+                  <div class='input-field col s12'>
+                    <input class='validate' type='email' name='email' id='email' />
+                    <label for='email'>Enter your email</label>
+                  </div>
+                </div>
+    
+                <div class='row'>
+                  <div class='input-field col s12'>
+                    <input class='validate' type='password' name='password' id='password' />
+                    <label for='password'>Enter your password</label>
+                  </div>
+                  
+                    <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
+                </div>
+    
+                <br />
+       
+                  <div class='row'>
+                    <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
+                  </div>
+                  <span><a style="color: #810a57; font-weight: 500; " href="{% url 'customer:signup' %}">Create account</a> <a style="color: #810a57; font-weight: 500; float: right; " href="{% url 'customer:index' %}">Back to Home</a></span>
+                  <p id="msg" style="color: red;"></p>
+                  <p style="color: red;">{{msg}}</p>
+       
+              </form>
+            </div>
+            <footer>
+              <p>&copy; 2024 Ekart. All rights reserved.</p>
+          </footer>
+          
+       
+
+        <script >function login_validate(){
+
+          user=document.getElementById('name').value
+          password= document.getElementById('password').value
+      
+          if(user==""){
+              document.getElementById('msg').innerHTML='please enter the username'
+              return false
+          }if(password==""){
+              document.getElementById('msg').innerHTML='please enter the password'
+              return false
+      
+          }else{
+              return true
+          }
+      
+      }</script>
+     
+      
+      
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    </body>
+    
+</html>

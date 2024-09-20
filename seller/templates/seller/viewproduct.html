@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        table, th, td{
+            border: 1px solid;
+            border-collapse: collapse;
+            width: fit-content;
+            height: fit-content;    
+        }
+        .container-fluid{
+          
+            background: url("{% static 'img/ekartimage2.jpg' %}") no-repeat center ;
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            position: relative;
+            height: 700px;
+            width: 100%;
+            
+        }
+
+        .container{
+            color: white;
+            height: 500px;
+            backdrop-filter: blur(50px);
+            text-align: center;
+            
+        }
+        table{
+            height: 500px;
+            width: 800px;
+            
+        }
+
+        button {
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: #e7c592;
+                color: #0a0a0a;
+                text-decoration: none;
+                font-size: 100;
+                margin-right: 15px;
+                transition: background-color 0.3s ease;
+                border-radius: 50px;
+                border-style: groove;
+                margin-top: 20px;
+                font-weight: 600;
+                
+                
+            }
+            
+            button:hover {
+                background-color: #a13d0b;
+                
+                
+                text-align: center;
+               
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+                
+                
+                
+            }
+           
+       
+    </style>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        
+ 
+        <div class="container">
+            
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Images</th>
+                    <th>delete</th>
+                    <th>Update</th>
+                </tr>
+                {% for product in products %}
+                <tr>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.description}}</td>
+                    <td><img src="{{product.image.url}}" alt=""  style="width: 30px; height: 30px;"></td>
+                    
+                    <td><a style=" background-color: aliceblue; border-radius: 5px; font-weight: 800; text-decoration: none; color: red;" href="{% url 'seller:delete_pdt' product.id %}">delete</a></td>
+                    <td><a style="background-color: rgb(5, 25, 43); border-radius: 5px; font-weight: 800; text-decoration: none; color: greenyellow;" href="{% url 'seller:update_pdt' product.id %}">Update</a></td>
+                </tr>
+                {% endfor %}
+
+            </table><br>
+
+            <button type="submit"><a style="text-decoration: none;" href="{% url 'seller:dashboard' %}">Back to Dashboard</a></button>
+        </div>
+
+    </div>
+
+</body>
+</html>

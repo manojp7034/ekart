@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/seller.css' %}">
+    <!-- <style>
+        .field{
+            background-color: blue;
+        }
+    </style> -->
+
+</head>
+<body>
+<div class="container1">
+
+
+<form onsubmit="return validate()"  method="post">
+  {% csrf_token %}
+  <div class="imgcontainer">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnBNeTt57ZNDHZ2d1GQNBiOn0kxlXn5KLIpA&s" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label  for="uname"><b>Username</b></label>
+    <input id="un" type="text" placeholder="Enter Username" name="email" >
+    <p style="color: red;">{{msg}}</p>
+
+    <label for="psw"><b>Password</b></label>
+    <input id="ps" type="password" placeholder="Enter Password" name="password" >
+    <p style="color: red;" id="msg"></p>
+        
+    <button type="submit">Login</button>
+    
+    <button type="submit"><a style="text-decoration: none; color: white;" href="{% url 'seller:signup' %}">sign up</a></button>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <a href="{% url 'seller:signup' %}"><button type="button" class="cancelbtn">Cancel</button></a>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+</div>
+
+  <script src="{% static 'js/seller.js' %}"></script>
+
+</body>
+</html>

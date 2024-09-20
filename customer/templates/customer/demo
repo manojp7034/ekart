@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <link rel="stylesheet" href="">
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.product-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.product-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.add-to-cart-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+.add-to-cart-btn:active {
+    background-color: #0056b3;
+    transform: translateY(1px);
+}
+
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <h2>Product Name</h2>
+        <div class="product-details">
+            <img src="product_image.jpg" alt="Product Image" class="product-image">
+            <p>Description of the product goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $99.99</p>
+            <form id="add-to-cart-form">
+                <input type="hidden" name="product_id" value="1">
+                <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>
